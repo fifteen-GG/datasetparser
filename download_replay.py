@@ -43,7 +43,7 @@ def main():
 
 
 main()
-schedule.every(180).minutes.do(main)
+schedule.every(30).minutes.do(main)
 
 while True:
     schedule.run_pending()
