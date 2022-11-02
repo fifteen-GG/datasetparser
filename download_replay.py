@@ -27,7 +27,7 @@ def download_replay(port, token, gameId):
 
 def main():
     # add game_dir if Riot Client is not installed in default location
-    parser = ReplayParser()
+    parser = ReplayParser(current_game_version='12.21')
     metadata = parser.get_client_metadata()
 
     res = requests.get(
