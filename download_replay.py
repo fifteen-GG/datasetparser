@@ -31,7 +31,7 @@ def main():
     metadata = parser.get_client_metadata()
 
     res = requests.get(
-        url='http://54.180.126.43/api/v1/train_game'
+        url='http://13.124.221.110/api/v1/train_game'
     )
 
     replay_list = res.json()
