@@ -40,10 +40,11 @@ def main():
         replay_name = replay['match_id'].split('-')[1]
         if int(replay_name.strip()[-2:]) >= 0 and int(replay_name.strip()[-2:]) <= 24:
             download_replay(metadata['port'], metadata['token'], replay_name)
+    print("Done downloading, waiting for next 5 minutes")
 
 
 main()
-schedule.every(30).minutes.do(main)
+schedule.every(5).minutes.do(main)
 
 while True:
     schedule.run_pending()
